@@ -1,0 +1,61 @@
+#+TITLE: Readme
+
+
+* Resources For SICP
+** Book
+https://sarabander.github.io/sicp/
+*** Read on emacs with textinfo
+You can download sicp package from melpa.
+It downlads SICP in textinfo format.
+**** Doom emacs
+Just for new comers of doom emacs.
+If you don't know org babel just follow manual one
+***** Manual
+****** .doom.d/packages.el
+Add this line at
+#+BEGIN_SRC emacs-lisp
+(package! sicp)
+#+END_SRC
+****** Open terminal
+#+begin_src sh
+~/emacs.d/bin/doom sync
+#+end_src
+
+***** I want C-c C-c Magic!
+#+BEGIN_SRC sh
+echo "(package! sicp)" >> ~/.doom.d/packages.el
+#+END_SRC
+
+#+BEGIN_SRC sh
+~/emacs.d/bin/doom sync
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :results no
+(doom/reload)
+#+END_SRC
+** Videos
+[[https://www.youtube.com/playlist?list=PLE18841CABEA24090][1986 MIT]]
+[[https://www.youtube.com/playlist?list=PLVFrD1dmDdvdvWFK8brOVNL7bKHpE-9w0][code_report]]
+[[https://www.youtube.com/playlist?list=PLhMnuBfGeCDNgVzLPxF9o5UNKG1b-LFY9][2010 Berkeley]]
+* Languages
+Book uses mit-scheme.
+Only problem with mit-scheme is it's not usable with org babel.
+** racket
+*** Troubleshoot
+**** Can't insall sicp
+***** Installation ways
+****** 1 GUI
+1. Go to File -> Package Manager -> Do What I Mean
+2. Enter sicp
+3. Wait (a lot if nothing happens)
+****** 2 Command line
+Enter
+
+#+begin_src sh
+raco pkg install sicp
+#+end_src
+***** A solution
+Enter
+#+begin_src sh
+raco pkg config --set catalogs https://download.racket-lang.org/releases/7.9/catalog/ ""
+#+end_src
