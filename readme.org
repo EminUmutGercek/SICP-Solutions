@@ -50,7 +50,6 @@ Only problem with mit-scheme is it's not usable with org babel.
 3. Wait (a lot if nothing happens)
 ****** 2 Command line
 Enter
-
 #+begin_src sh
 raco pkg install sicp
 #+end_src
@@ -59,3 +58,5 @@ Enter
 #+begin_src sh
 raco pkg config --set catalogs https://download.racket-lang.org/releases/7.9/catalog/ ""
 #+end_src
+** Language for 2010 Berkeley Lessons
+Just paste this [[https://gist.github.com/alexgian/5b351f367169b40a4ad809f0bb718e1f][this]] code before your code.
